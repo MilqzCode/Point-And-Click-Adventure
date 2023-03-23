@@ -3,6 +3,7 @@ body {
     color: white;
     display: grid;
     grid-template-columns: auto auto auto;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #mainTitle {
@@ -35,6 +36,31 @@ body {
     z-index: 1000;
 }
 
+.speech-bubble {
+	position: relative;
+	background: #ffffff;
+	border-radius: 60px;
+    padding: 5px;
+    color: black;
+    font-size: 12px;
+    left: 8px;
+    top: -5px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+	width: 0;
+	height: 0;
+	border: 12px solid transparent;
+	border-top-color: #ffffff;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -6px;
+	margin-bottom: -12px;
+}
 
 #mainCharacter{
     top: 160px;
@@ -42,10 +68,18 @@ body {
     transition: all 1s ease-in-out;
 }
 
-#door1{
+#chest{
     top: 99px;
     left: 352px;
     width: 32px;
     height: 32px;
+    background-color: white;
+}
+
+#statue{
+    top: 455px;
+    left: 712px;
+    width: 50px;
+    height: 50px;
     background-color: white;
 }
