@@ -30,6 +30,10 @@ gameWindow.onclick = function (e) {
                 if (checkItem("rusty key")) {
                     showSpeech(mainCharacterSpeech, characterAudio, "OMG it fits.. This chest is now open.");
                     document.getElementById("tree").style.opacity = 1;
+                    removeItem("rusty key", "rustyKey");
+                    setTimeout(showSpeech, 4 * sec, mainCharacterSpeech, characterAudio, "It looks like I got a Diamond");
+                    getItem("The hidden diamond", "diamond");
+                    setTimeout(showSpeech, 8 * sec, mainCharacterSpeech, characterAudio, "Well im done now. Bye...");
                 } else {
                     showSpeech(mainCharacterSpeech, characterAudio, "This is a chest, and its locked!");
                     document.getElementById("tree").style.opacity = 1;
@@ -37,7 +41,7 @@ gameWindow.onclick = function (e) {
                 break;
             case "door2":
                 //something insert here
-                showSpeech(mainCharacterSpeech, characterAudio, "noboby is home...<br> Come back later..");
+                showSpeech(mainCharacterSpeech, characterAudio, "This is a sign so.. Move!");
                 document.getElementById("tree").style.opacity = 1;
                 break;
             case "tree":
